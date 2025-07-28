@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Showcase</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray -100 text-center p-10">
+    <!-- navbar -->
+    <nav class="pb-4 b- w-full sticky top-0 z-50 bg-gray-400 border-b-2">
+      <div>
+        <h1 class="text-xl font-bold">متجر دلع طفلك</h1>
+        <ul class="flex gap-6 text-gray-700">
+          <li>
+            <a href="#" class="hover:text-blue-500 bg-yellow-500 rounded px-2"
+              >الرئيسة</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500 bg-yellow-500 rounded px-2"
+              >المنتجات</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500 bg-yellow-500 rounded px-2"
+              >اتصل بنا</a
+            >
+          </li>
+          <div class="flex justify-start gap-6 mt-">
+            <button class="text-gray-700 hover:text-blue-500">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="text-gray-700 hover:text-blue-500">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <button
+              id="menu-toggle"
+              class="text-gray-700 hover:text-blue-500 md:hidden"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </ul>
+        <!-- <div class="flex flex-row-reverse justify-start items-center gap-6 ">
+          <button class="text-gray-700 hover:text-blue-500">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="text-gray-700 hover:text-blue-500">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button class="text-gray-700 hover:text-blue-500 md:hidden">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div> -->
+
+        <ul
+          id="menu-mobile"
+          class="md:hidden hidden flex-col gap-4 px-4 pb-4 text-gray-700 font-medium"
+        >
+          <li>
+            <a href="#" class="hover:text-blue-500 bg-yellow-500 rounded px-2"
+              >الرئيسة</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500 bg-yellow-500 rounded px-2"
+              >المنتجات</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-blue-500 bg-yellow-500 rounded px-2"
+              >تواصل بنا</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-200 text-center py-16">
+      <h2 class="text-3xl font-bold mb-4">اطلع على منتجات متجر دلع طفلك</h2>
+      <p class="text-lg">دلع طفلك باقل الاسعار وافضل المنتجات</p>
+    </section>
+
+    <section class="relative px-4 py-10">
+      <h3 class="text-2xl font-bold mb-6 text-center">المنتجات</h3>
+
+      <button
+        id="previes"
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-10"
+      >
+        <i class="fas fa-chevron-left text-gray-700"></i>
+      </button>
+      <button
+        id="next"
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-10"
+      >
+        <i class="fas fa-chevron-right text-gray-700"></i>
+      </button>
+
+      <div
+        id="slider"
+        class="flex overflow-x-auto gap-6 scroll-smooth transition-all duration-300"
+      ></div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg w-[90%] max-w-md p-6 relative">
+        <button
+          id="modalClose"
+          class="absolute top-2 right-2 text-gray-600 hover:text-red-500"
+        >
+          ✖
+        </button>
+        <img
+          id="modalImg"
+          src=""
+          alt="Product Image"
+          class="w-full h-48 object-cover mb-4 rounded"
+        />
+        <h4 id="modalName" class="text-xl font-bold mb-2"></h4>
+        <p id="modalCompany" class="text-sm text-gray-500 mb-2"></p>
+        <p id="modalDesc" class="text-gray-700 mb-4"></p>
+        <p id="modalPrice" class="text-lg font-bold text-blue-600 mb-2"></p>
+
+        <!-- Stars -->
+        <div
+          id="modalStars"
+          class="flex gap-1 text-yellow-700 cursor-pointer text-xl"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+      <p>© 2025 جميع الحقوق محفوطة لدي متجر دلع طفلك.</p>
+    </footer>
+
+    <!--  JavaScripts -->
+    <script src="main.js"></script>
+  </body>
+</html>
